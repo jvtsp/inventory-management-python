@@ -1,37 +1,51 @@
 # Inventory Management Python
 
-Sistema simples de controle de estoque e ponto de venda feito com Python/Tkinter e MySQL. O projeto permite buscar produtos, adicionar itens a uma venda, calcular total e registrar alteracoes no estoque.
+Inventory and point-of-sale study app with Python, Tkinter and MySQL.
 
-## Tecnologias
+PT-BR: sistema simples de estoque e venda, mantido como estudo de aplicacao desktop com banco relacional.
+
+## Overview
+
+This project demonstrates a small desktop workflow for product lookup, sales calculation and inventory updates backed by MySQL.
+
+## Stack
 
 - Python
 - Tkinter
 - MySQL
-- Bootstrap/HTML para interface auxiliar
+- HTML/Bootstrap auxiliary files
 
-## Como executar
+## Architecture
 
-Instale as dependencias Python:
+- `main.py` contains the main sales and lookup interface.
+- `add_to_db.py` handles product registration.
+- `update.py` handles inventory updates.
+- `web/` contains auxiliary interface assets.
+
+## Setup
 
 ```bash
+python -m venv .venv
+source .venv/bin/activate
 pip install mysql-connector-python
 ```
 
-Crie o banco MySQL esperado pela aplicacao e ajuste as credenciais no codigo, se necessario.
+Create the expected MySQL database and review connection settings in the Python files before running the app.
 
-Execute:
+## Usage
 
 ```bash
 python main.py
 ```
 
-## Estrutura
+## Project Status
 
-- `main.py` - interface principal de venda/consulta.
-- `add_to_db.py` - cadastro de produtos.
-- `update.py` - atualizacao de produtos.
-- `web/` - arquivos auxiliares de interface web.
+`study`
 
-## Status
+This is a supporting project for desktop UI, CRUD workflows and relational database practice.
 
-Projeto de estudo em evolucao. Antes de usar em producao, vale extrair configuracoes do banco para variaveis de ambiente e melhorar validacoes.
+## Roadmap
+
+- Move database configuration to environment variables.
+- Add schema creation script.
+- Add screenshots of the desktop workflow.
